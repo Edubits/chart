@@ -1,5 +1,5 @@
 /*
-	Copyright 2017 Marceau Dewilde <m@ceau.be>
+	Copyright 2020 Marceau Dewilde <m@ceau.be>
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -46,6 +46,7 @@ public class Options<T extends Options<T>> {
 	private Hover hover;
 	private Animation<?> animation;
 	private Layout layout;
+	private Object plugins;
 
 	/**
 	 * @see #setResponsive(Boolean)
@@ -280,6 +281,25 @@ public class Options<T extends Options<T>> {
 	@SuppressWarnings("unchecked")
 	public T setLayout(Layout layout) {
 		this.layout = layout;
+		return (T) this;
+	}
+	
+	/**
+	 * @see #setPlugins(Object)
+	 */
+	public Object getPlugins() {
+		return plugins;
+	}
+
+	/**
+	 * A placeholder in which configuration options for plugins may be passed.
+	 *
+	 * @param plugins {@link Object} or {@code null}
+	 * @return {@code this} instance for chaining
+	 */
+	@SuppressWarnings("unchecked")
+	public T setPlugins(Object plugins) {
+		this.plugins = plugins;
 		return (T) this;
 	}
 

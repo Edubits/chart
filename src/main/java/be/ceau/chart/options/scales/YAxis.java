@@ -1,5 +1,5 @@
 /*
-	Copyright 2017 Marceau Dewilde <m@ceau.be>
+	Copyright 2020 Marceau Dewilde <m@ceau.be>
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import be.ceau.chart.options.ticks.Ticks;
 public class YAxis<T extends Ticks<T>> {
 
 	/**
-	 * @see #setTicks(T)
+	 * @see #setTicks(Ticks)
 	 */
 	private T ticks;
 
@@ -60,7 +60,7 @@ public class YAxis<T extends Ticks<T>> {
 	private Boolean stacked;
 
 	/**
-//	 * @see #setTicks(T)
+	 * @see #setTicks(Ticks)
 	 */
 	public T getTicks() {
 		return ticks;

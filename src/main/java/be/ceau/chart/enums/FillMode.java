@@ -13,23 +13,28 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-package be.ceau.chart.tests;
+package be.ceau.chart.enums;
 
-import be.ceau.chart.Chart;
-import be.ceau.chart.PieChart;
-import be.ceau.chart.data.PieData;
-import be.ceau.chart.options.PieOptions;
-import be.ceau.chart.tests.util.TestFactory;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-public class PieTest extends ChartTest {
-	
-	@Override
-	public Chart createChart() {
-		PieChart chart = new PieChart();
-		chart.setData(TestFactory.randomInstance(PieData.class));
-		chart.setOptions(TestFactory.randomInstance(PieOptions.class));
-		System.out.println("Chart is" + (chart.isDrawable() ? " " : " NOT ") + "drawable");
-		return chart;
+import java.util.Locale;
+
+public enum FillMode {
+
+	ORIGIN,
+	START,
+	END;
+
+	private final String serialized;
+
+	private FillMode() {
+		this.serialized = name().toLowerCase(Locale.ENGLISH);
 	}
 
+	@Override
+	@JsonValue
+	public String toString() {
+		return this.serialized;
+	}
+	
 }

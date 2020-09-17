@@ -1,5 +1,5 @@
 /*
-	Copyright 2017 Marceau Dewilde <m@ceau.be>
+	Copyright 2020 Marceau Dewilde <m@ceau.be>
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -85,9 +85,9 @@ public class Line {
 	private Boolean capBezierPoints;
 
 	/**
-	 * @see #setFill(Boolean)
+	 * @see #setFill(Fill)
 	 */
-	private Boolean fill;
+	private Fill fill;
 
 	/**
 	 * @see #setStepped(Boolean)
@@ -313,9 +313,9 @@ public class Line {
 	}
 
 	/**
-	 * @see #setFill(Boolean)
+	 * @see #setFill(Fill)
 	 */
-	public Boolean getFill() {
+	public Fill getFill() {
 		return this.fill;
 	}
 
@@ -328,7 +328,7 @@ public class Line {
 	 * Default {@code true}
 	 * </p>
 	 */
-	public Line setFill(Boolean fill) {
+	public Line setFill(Fill fill) {
 		this.fill = fill;
 		return this;
 	}

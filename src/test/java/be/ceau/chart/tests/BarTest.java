@@ -1,5 +1,5 @@
 /*
-	Copyright 2017 Marceau Dewilde <m@ceau.be>
+	Copyright 2020 Marceau Dewilde <m@ceau.be>
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 package be.ceau.chart.tests;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 import org.junit.Test;
 
@@ -85,6 +86,7 @@ public class BarTest extends ChartTest {
 				.setStepSize(5);
 
 		BarScale scale = new BarScale()
+				.addxAxes(BarScale.xAxis().setBarThickness(new BigDecimal(50)))
 				.addyAxes(BarScale.yAxis().setTicks(ticks));
 
 		BarOptions options = new BarOptions()

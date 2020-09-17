@@ -1,5 +1,5 @@
 /*
-	Copyright 2017 Marceau Dewilde <m@ceau.be>
+	Copyright 2020 Marceau Dewilde <m@ceau.be>
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -26,32 +26,36 @@ public class Padding {
 		return left;
 	}
 
-	public void setLeft(int left) {
+	public Padding setLeft(int left) {
 		this.left = left;
+		return this;
 	}
 
 	public int getRight() {
 		return right;
 	}
 
-	public void setRight(int right) {
+	public Padding setRight(int right) {
 		this.right = right;
+		return this;
 	}
 
 	public int getTop() {
 		return top;
 	}
 
-	public void setTop(int top) {
+	public Padding setTop(int top) {
 		this.top = top;
+		return this;
 	}
 
 	public int getBottom() {
 		return bottom;
 	}
 
-	public void setBottom(int bottom) {
+	public Padding setBottom(int bottom) {
 		this.bottom = bottom;
+		return this;
 	}
 
 }

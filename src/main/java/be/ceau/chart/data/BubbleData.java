@@ -1,5 +1,5 @@
 /*
-	Copyright 2017 Marceau Dewilde <m@ceau.be>
+	Copyright 2020 Marceau Dewilde <m@ceau.be>
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ public class BubbleData {
 	}
 
 	public BubbleData setDatasets(Collection<BubbleDataset> datasets) {
-		this.datasets.clear();
+		clearDatasets();
 		if (datasets != null) {
 			this.datasets.addAll(datasets);
 		}
@@ -50,7 +50,7 @@ public class BubbleData {
 	}
 
 	public BubbleData setDatasets(BubbleDataset... datasets) {
-		this.datasets.clear();
+		clearDatasets();
 		if (datasets != null) {
 			for (int i = 0; i < datasets.length; i++) {
 				this.datasets.add(datasets[i]);
@@ -61,9 +61,6 @@ public class BubbleData {
 
 	public BubbleData clearDatasets() {
 		this.datasets.clear();
-		if (datasets != null) {
-			this.datasets.addAll(datasets);
-		}
 		return this;
 	}
 

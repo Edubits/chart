@@ -1,5 +1,5 @@
 /*
-	Copyright 2017 Marceau Dewilde <m@ceau.be>
+	Copyright 2020 Marceau Dewilde <m@ceau.be>
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -46,6 +46,7 @@ public class BarOptions extends Options<BarOptions> {
 	 * @return {@link Hover} instance or {@code null}
 	 * @see #setHover(Hover)
 	 */
+	@Override
 	public Hover getHover() {
 		return hover;
 	}
@@ -63,6 +64,7 @@ public class BarOptions extends Options<BarOptions> {
 	 *            {@link Hover} instance or {@code null}
 	 * @return this {@link BarOptions} instance for method chaining
 	 */
+	@Override
 	public BarOptions setHover(Hover hover) {
 		this.hover = hover;
 		return this;
