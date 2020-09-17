@@ -16,6 +16,7 @@
 package be.ceau.chart.options.scales;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -43,16 +44,16 @@ public class Time {
 	/**
 	 * Default {@code -}
 	 * 
-	 * @see #setMax(Time)
+	 * @see #setMax(Date)
 	 */
-	private Time max;
+	private Date max;
 
 	/**
 	 * Default {@code -}
 	 * 
-	 * @see #setMin(Time)
+	 * @see #setMin(Date)
 	 */
-	private Time min;
+	private Date min;
 
 	/**
 	 * Default {@code -}
@@ -120,31 +121,31 @@ public class Time {
 	}
 
 	/**
-	 * @see #setMax(Time)
+	 * @see #setMax(Date)
 	 */
-	public Time getMax() {
+	public Date getMax() {
 		return this.max;
 	}
 
 	/**
 	 * If defined, this will override the data maximum
 	 */
-	public Time setMax(Time max) {
+	public Time setMax(Date max) {
 		this.max = max;
 	    return this;
 	}
 
 	/**
-	 * @see #setMin(Time)
+	 * @see #setMin(Date)
 	 */
-	public Time getMin() {
+	public Date getMin() {
 		return this.min;
 	}
 
 	/**
 	 * If defined, this will override the data minimum
 	 */
-	public Time setMin(Time min) {
+	public Time setMin(Date min) {
 		this.min = min;
 	    return this;
 	}
